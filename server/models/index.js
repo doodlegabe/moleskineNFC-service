@@ -24,7 +24,7 @@ console.log('on prod');
 } else {
 
   console.log('not on prod');
-  const config = require(`${__dirname}/../config/config.js`)[env];
+  const config = require(`${__dirname}/../config/env.js`)[env];
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
