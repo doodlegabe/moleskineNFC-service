@@ -3,7 +3,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(`${__dirname}/../config/config.js`)[env];
+
 
 let sequelize;
 
@@ -22,7 +22,10 @@ console.log('on prod');
   sequelize = new Sequelize(process.env.DATABASE_NAME, process.env.DATABASE_USER, process.env.DATABASE_PASSWORD, prodConfig);
 
 } else {
-    sequelize = new Sequelize(config.database, config.username, config.password, config);
+
+  console.log('not on prod');
+  const config = require(`${__dirname}/../config/config.js`)[env];
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 global.db = {};
