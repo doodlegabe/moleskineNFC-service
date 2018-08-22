@@ -8,11 +8,15 @@ const config = require(`${__dirname}/../config/config.js`)[env];
 let sequelize;
 
 if (process.env.DATABASE_URL && process.env.NODE_ENV === "production") {
+
   sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect:  'postgres',
     protocol: 'postgres',
+    port:     match[4],
+    host:     match[3],
     logging:  false
   });
+
 } else {
   if (config.use_env_variable) {
     sequelize = new Sequelize(process.env[config.use_env_variable]);
