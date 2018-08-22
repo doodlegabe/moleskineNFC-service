@@ -3,14 +3,10 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
-
+const config = require(`${__dirname}/../config/envs.js`)[env];
 
 let sequelize;
-
 if (process.env.NODE_ENV === "production") {
-
-console.log('on prod');
-
   const prodConfig = {
     dialect:  'postgres',
     protocol: 'postgres',
@@ -18,13 +14,8 @@ console.log('on prod');
     host:     process.env.DATABASE_HOST,
     logging:  false
   };
-
   sequelize = new Sequelize(process.env.DATABASE_NAME, process.env.DATABASE_USER, process.env.DATABASE_PASSWORD, prodConfig);
-
 } else {
-
-  console.log('not on prod');
-  const config = require(`${__dirname}/../config/env.js`)[env];
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
