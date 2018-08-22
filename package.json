@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn run build && mocha --compilers js:babel-register",
-    "startdev": "yarn run build && nodemon ./bin/www --exec babel-node",
+    "start": "yarn run build && nodemon ./bin/www --exec babel-node",
     "build": "babel lib -d dist",
-    "start": "node dist/index.js"
+    "serve": "node dist/app.js"
   },
   "keywords": [
     "nfc",
