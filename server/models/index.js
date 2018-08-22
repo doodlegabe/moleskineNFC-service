@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(`${__dirname}/../config/config.js`)[env];
-const db = {};
+
 let sequelize;
 
 if (process.env.DATABASE_URL && process.env.NODE_ENV === "production") {
@@ -22,8 +22,10 @@ if (process.env.DATABASE_URL && process.env.NODE_ENV === "production") {
     );
   }
 }
-fs
-  .readdirSync(__dirname)
+
+global.db = {};
+
+fs.readdirSync(__dirname)
   .filter(file =>
     (file.indexOf('.') !== 0) &&
     (file !== basename) &&
@@ -33,14 +35,14 @@ fs
     db[model.name] = model;
   });
 
-Object.keys(db).forEach(modelName => {
-  console.log(modelName);
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
+
+Object.keys(global.db).forEach(modelName => {
+  if (global.db[modelName].associate) {
+    global.db[modelName].associate(global.db);
   }
 });
 
-db.sequelize = sequelize;
-db.Sequelize = Sequelize;
+global.db.sequelize = sequelize;
+global.db.Sequelize = Sequelize;
 
-module.exports = db;
+module.exports = global.db;
