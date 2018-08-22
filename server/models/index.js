@@ -7,24 +7,22 @@ const config = require(`${__dirname}/../config/config.js`)[env];
 
 let sequelize;
 
-if (process.env.DATABASE_URL && process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
 
-  sequelize = new Sequelize(process.env.DATABASE_URL, {
+console.log('on prod');
+
+  const prodConfig = {
     dialect:  'postgres',
     protocol: 'postgres',
     port:     process.env.DATABASE_PORT,
     host:     process.env.DATABASE_HOST,
     logging:  false
-  });
+  };
+
+  sequelize = new Sequelize(process.env.DATABASE_NAME, process.env.DATABASE_USER, process.env.DATABASE_PASSWORD, prodConfig);
 
 } else {
-  if (config.use_env_variable) {
-    sequelize = new Sequelize(process.env[config.use_env_variable]);
-  } else {
-    sequelize = new Sequelize(
-      config.database, config.username, config.password, config
-    );
-  }
+    sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 global.db = {};
