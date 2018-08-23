@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   Tag.associate = (models) => {
     Tag.belongsTo(models.Notebook, {
       foreignKey: 'notebookId',
-      onDelete: 'NO ACTION', // eventually a tag would be independent of notebooks
+      as: 'notebook'
     });
   };
 

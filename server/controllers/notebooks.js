@@ -76,13 +76,13 @@ module.exports = {
         }
       })
       .then(tag => {
-        if (!tag || tag.uri !== req.body.uri) {
+        if (!tag) {
           return res.status(404).send({
             message: 'No matching tag'
           })
         } else {
           return Notebook
-            .findById(tag.notebookId, {
+            .findById(tag[0].dataValues.notebookId, {
               include: [
                 {
                   model: Page,

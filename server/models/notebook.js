@@ -9,8 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   Notebook.associate = (models) => {
     Notebook.belongsTo(models.User, {
       foreignKey: 'userId',
-      as: 'owner',
-      onDelete: 'CASCADE',
+      as: 'owner'
     });
     Notebook.hasOne(models.Tag, {
       foreignKey: 'notebookId',

@@ -24,6 +24,13 @@ module.exports = {
           email: mockUsers.users[2].email,
           createdAt:new Date(),
           updatedAt:new Date()
+        },
+        {
+          first_name :mockUsers.users[3].first_name,
+          last_name: mockUsers.users[3].last_name,
+          email: mockUsers.users[3].email,
+          createdAt:new Date(),
+          updatedAt:new Date()
         }
       ]);
   },
@@ -33,7 +40,8 @@ module.exports = {
       email: [
         mockUsers.users[0].email,
         mockUsers.users[1].email,
-        mockUsers.users[2].email
+        mockUsers.users[2].email,
+        mockUsers.users[3].email,
       ]
     });
   }
