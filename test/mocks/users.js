@@ -22,6 +22,14 @@ const userList = [
     email: "jules@doe.com",
     updatedAt: new Date(),
     createdAt: new Date()
+  },
+  {
+    id: 4,
+    first_name: "Gabriel",
+    last_name: "Walsh",
+    email: "gabriel.walsh@moleskine.com",
+    updatedAt: new Date(),
+    createdAt: new Date()
   }
 ];
 

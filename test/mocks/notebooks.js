@@ -1,22 +1,31 @@
+// Tag 1 is on USB-C adapter, Tag 2 is on Smart Lined, Tag 3 is on Smart Dotted, Tag 4 is on squared
+
 const notebookList = [
   {
     id: 1,
-    title: "John's first notebook",
+    title: "USB-C Adapter used for tests",
     userId: 1,
     updatedAt: new Date(),
     createdAt: new Date()
   },
   {
     id: 2,
-    title: "John's second notebook",
-    userId: 1,
+    title: "Smart Writing Set Testing Book",
+    userId: 4,
     updatedAt: new Date(),
     createdAt: new Date()
   },
   {
     id: 3,
-    title: "My diary",
-    userId: 2,
+    title: "Smart Writing Set - CSX Demo Book",
+    userId: 4,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 4,
+    title: "Mouse Mountain 2 Project Journal",
+    userId: 4,
     updatedAt: new Date(),
     createdAt: new Date()
   }

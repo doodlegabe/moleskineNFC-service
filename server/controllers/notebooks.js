@@ -5,7 +5,7 @@ const PageItem = require("../models").PageItem;
 const User = require("../models").User;
 
 module.exports = {
-  create( req, res ){
+  create(req, res) {
     return Notebook
       .create({
         title: req.body.title,
@@ -68,7 +68,7 @@ module.exports = {
       })
       .catch(error => res.status(400).send(error));
   },
-  whatIsInsideNotebook(req, res){
+  whatIsInsideNotebook(req, res) {
     return Tag
       .findAll({
         where: {
@@ -76,15 +76,15 @@ module.exports = {
         }
       })
       .then(tag => {
-          if(!tag){
-            return res.status(404).send({
-              message:'No matching tag'
-            })
-          }else{
-            return Notebook
-              .findById(tag[0].dataValues.notebookId,{
-                include:[
-                  {
+        if (!tag || tag.uri !== req.body.uri) {
+          return res.status(404).send({
+            message: 'No matching tag'
+          })
+        } else {
+          return Notebook
+            .findById(tag.notebookId, {
+              include: [
+                {
                   model: Page,
                   as: 'pages',
                   include: [{
@@ -92,22 +92,22 @@ module.exports = {
                     as: 'pageItems'
                   }]
                 },
-                  {
-                    model: User,
-                    as: 'owner'
-                  }
-                  ]
-              })
-              .then(notebook =>{
-                if(!notebook){
-                  return res.status(404).send({
-                    message:'No matching notebook'
-                  })
-                }else{
-                  return res.status(200).send(notebook);
+                {
+                  model: User,
+                  as: 'owner'
                 }
-              })
-          }
+              ]
+            })
+            .then(notebook => {
+              if (!notebook) {
+                return res.status(404).send({
+                  message: 'No matching notebook'
+                })
+              } else {
+                return res.status(200).send(notebook);
+              }
+            })
+        }
       })
-  },
+    },
 };
