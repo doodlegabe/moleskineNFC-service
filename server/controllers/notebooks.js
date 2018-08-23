@@ -76,6 +76,7 @@ module.exports = {
         }
       })
       .then(tag => {
+        console.log(tag[0].dataValues.notebookId);
         if (!tag) {
           return res.status(404).send({
             message: 'No matching tag'
