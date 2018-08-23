@@ -24,6 +24,13 @@ module.exports = {
           notebookId: mockTags.tags[2].notebookId,
           createdAt:new Date(),
           updatedAt:new Date()
+        },
+        {
+          uuid: mockTags.tags[3].uuid,
+          uri: mockTags.tags[3].uri,
+          notebookId: mockTags.tags[3].notebookId,
+          createdAt:new Date(),
+          updatedAt:new Date()
         }
       ]);
   },
@@ -33,7 +40,8 @@ module.exports = {
       email: [
         mockTags.uuid[0].uuid,
         mockTags.uuid[1].uuid,
-        mockTags.uuid[2].uuid
+        mockTags.uuid[2].uuid,
+        mockTags.uuid[3].uuid
       ]
     });
   }

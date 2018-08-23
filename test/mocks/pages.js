@@ -1,22 +1,59 @@
+// Tag 1 is on USB-C adapter, Tag 2 is on Smart Lined, Tag 3 is on Smart Dotted, Tag 4 is on squared
+
 const pageList = [
   {
     id: 1,
-    notebookId: 1,
+    notebookId: 2,
     number: 1,
     updatedAt: new Date(),
     createdAt: new Date()
   },
   {
     id: 2,
-    notebookId: 1,
+    notebookId: 2,
     number: 2,
     updatedAt: new Date(),
     createdAt: new Date()
   },
   {
     id: 3,
-    notebookId: 2,
+    notebookId: 3,
     number: 1,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 4,
+    notebookId: 3,
+    number: 2,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 5,
+    notebookId: 4,
+    number: 1,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 6,
+    notebookId: 4,
+    number: 2,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 7,
+    notebookId: 1,
+    number: 1,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 8,
+    notebookId: 1,
+    number: 2,
     updatedAt: new Date(),
     createdAt: new Date()
   }

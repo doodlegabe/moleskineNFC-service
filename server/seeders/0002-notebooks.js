@@ -21,6 +21,12 @@ module.exports = {
           userId: mockNotebooks.notebooks[2].userId,
           createdAt:new Date(),
           updatedAt:new Date()
+        },
+        {
+          title :mockNotebooks.notebooks[3].title,
+          userId: mockNotebooks.notebooks[3].userId,
+          createdAt:new Date(),
+          updatedAt:new Date()
         }
       ]);
   },
@@ -30,7 +36,8 @@ module.exports = {
       email: [
         mockNotebooks.notebooks[0].title,
         mockNotebooks.notebooks[1].title,
-        mockNotebooks.notebooks[2].title
+        mockNotebooks.notebooks[2].title,
+        mockNotebooks.notebooks[3].title
       ]
     });
   }
