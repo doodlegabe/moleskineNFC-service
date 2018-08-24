@@ -76,7 +76,7 @@ module.exports = {
         }
       })
       .then(tag => {
-        if (!tag) {
+        if (!tag || tag ===[] || tag.length === 0) {
           return res.status(404).send({
             message: 'No matching tag'
           })
