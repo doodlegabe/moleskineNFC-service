@@ -1,10 +1,8 @@
-// Tag 1 is on USB-C adapter, Tag 2 is on Smart Lined, Tag 3 is on Smart Dotted, Tag 4 is on squared
-
 const notebookList = [
   {
     id: 1,
     title: "USB-C Adapter used for tests",
-    userId: 1,
+    userId: 4,
     updatedAt: new Date(),
     createdAt: new Date()
   },
@@ -26,6 +24,13 @@ const notebookList = [
     id: 4,
     title: "Mouse Mountain 2 Project Journal",
     userId: 4,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 5,
+    title: "Peter's Adobe Creative Cloud connected Smart Paper Tablet prototype",
+    userId: 5,
     updatedAt: new Date(),
     createdAt: new Date()
   }
