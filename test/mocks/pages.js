@@ -1,5 +1,3 @@
-// Tag 1 is on USB-C adapter, Tag 2 is on Smart Lined, Tag 3 is on Smart Dotted, Tag 4 is on squared
-
 const pageList = [
   {
     id: 1,
@@ -31,8 +29,8 @@ const pageList = [
   },
   {
     id: 5,
-    notebookId: 4,
-    number: 1,
+    notebookId: 1,
+    number: 4,
     updatedAt: new Date(),
     createdAt: new Date()
   },
@@ -56,7 +54,28 @@ const pageList = [
     number: 2,
     updatedAt: new Date(),
     createdAt: new Date()
-  }
+  },
+  {
+    id: 9,
+    notebookId: 5,
+    number: 1,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 10,
+    notebookId: 5,
+    number: 2,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 11,
+    notebookId: 5,
+    number: 3,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
 ];
 
 exports.createPage = function(){

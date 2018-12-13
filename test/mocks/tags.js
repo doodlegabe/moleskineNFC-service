@@ -1,10 +1,8 @@
-// Tag 1 is on USB-C adapter, Tag 2 is on Smart Lined, Tag 3 is on Smart Dotted, Tag 4 is on squared
-
 const tagList = [
   {
     id: 1,
     uri: "https://curt.li/HjydZYyNl3Y",
-    uuid: "",
+    uuid: "23814d78-bc95-4ffc-9cb7-a052d2363bd0",
     notebookId: 1,
     updatedAt: new Date(),
     createdAt: new Date()
@@ -12,7 +10,7 @@ const tagList = [
   {
     id: 2,
     uri: "https://curt.li/XSpZ64kpjjw",
-    uuid: "",
+    uuid: "46f4e232-c37a-4a12-a307-87d5ac589dfc",
     notebookId: 2,
     updatedAt: new Date(),
     createdAt: new Date()
@@ -20,7 +18,7 @@ const tagList = [
   {
     id: 3,
     uri: "https://curt.li/SLfkfzYOgcM",
-    uuid: "",
+    uuid: "fe62b1c2-4304-42eb-9d3d-a86c43bf301c",
     notebookId: 3,
     updatedAt: new Date(),
     createdAt: new Date()
@@ -28,8 +26,16 @@ const tagList = [
   {
     id: 4,
     uri: "https://curt.li/Z1U4RuLkJSE",
-    uuid: "",
+    uuid: "4390b5ce-8da0-4f1e-8d9f-d8b0cab12d02",
     notebookId: 4,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 5,
+    uri: "https://curt.li/wW7bdbohy3Q",
+    uuid: "23814d78-bc95-4ffc-9cb7-a052d2363bd0",
+    notebookId: 5,
     updatedAt: new Date(),
     createdAt: new Date()
   }
