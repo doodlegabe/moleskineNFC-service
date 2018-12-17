@@ -76,6 +76,20 @@ const pageList = [
     updatedAt: new Date(),
     createdAt: new Date()
   },
+  {
+    id: 12,
+    notebookId: 6,
+    number: 1,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  },
+  {
+    id: 13,
+    notebookId: 6,
+    number: 2,
+    updatedAt: new Date(),
+    createdAt: new Date()
+  }
 ];
 
 exports.createPage = function(){
