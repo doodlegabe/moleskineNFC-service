@@ -33,6 +33,13 @@ const notebookList = [
     userId: 5,
     updatedAt: new Date(),
     createdAt: new Date()
+  },
+  {
+    id: 6,
+    title: "Peter's Idea Book",
+    userId: 5,
+    updatedAt: new Date(),
+    createdAt: new Date()
   }
 ];
 
