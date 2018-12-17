@@ -42,7 +42,7 @@ const tagList = [
   {
     id: 6,
     uri: "https://curt.li/UNTXiuxlkc4",
-    uuid: "",
+    uuid: "9aa75526-843a-43e3-a446-fc122deeaddc",
     notebookId: 6,
     updatedAt: new Date(),
     createdAt: new Date()
