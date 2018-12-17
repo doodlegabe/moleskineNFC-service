@@ -176,7 +176,7 @@ const pageItemList = [
     pageId: 10
   },
   {
-    id: 24,
+    id: 23,
     body: 'Reminder: Book Meeting with LV',
     image: '',
     updatedAt: new Date(),
@@ -184,21 +184,21 @@ const pageItemList = [
     pageId: 11
   },
   {
-    id: 23,
-    body: 'Idea #1',
-    image: 'https://hips.hearstapps.com/pop.h-cdn.co/assets/cm/15/05/54caaca0bf9aa_-_rid_patents_03_0810-lg.jpg?crop=1xw:1.0xh;center,top&resize=480:*',
+    id: 24,
+    body: 'Idea 1',
+    image: 'https://hips.hearstapps.com/pop.h-cdn.co/assets/cm/15/05/54caaca0bf9aa_-_rid_patents_03_0810-lg.jpg',
     updatedAt: new Date(),
     createdAt: new Date(),
     pageId: 12
   },
   {
-    id: 24,
-    body: 'Idea #2',
+    id: 25,
+    body: 'Idea 2',
     image: 'http://www.funnypatent.com/uploads/1/1/6/0/1160056/3552046.jpg',
     updatedAt: new Date(),
     createdAt: new Date(),
     pageId: 13
-  }
+  },
 ];
 
 exports.createPageItem = function(){
