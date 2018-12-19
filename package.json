@@ -4,6 +4,7 @@
   "description": "Returns a ToC linked to a given Selkino Tag. This is just a quick proof of concept.",
   "main": "index.js",
   "scripts": {
+    "deploy": "gcloud app deploy",
     "test": "yarn run build && mocha --compilers js:babel-register",
     "startdev": "yarn run build && nodemon ./bin/www --exec babel-node",
     "build": "babel lib -d dist",
@@ -25,7 +26,7 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "nock": "^9.6.1",
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
