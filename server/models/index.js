@@ -3,6 +3,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || 'development';
+console.log('now on ' + env);
 const config = require(`${__dirname}/../config/envs.js`)[env];
 
 let sequelize;
@@ -10,11 +11,10 @@ if (process.env.NODE_ENV === "production") {
   const prodConfig = {
     dialect:  'postgres',
     protocol: 'postgres',
-    port:     process.env.DATABASE_PORT,
-    host:     process.env.DATABASE_HOST,
+    host:     `/cloudsql/${process.env.CLOUD_SQL_CONNECTION_NAME}`,
     logging:  false
   };
-  sequelize = new Sequelize(process.env.DATABASE_NAME, process.env.DATABASE_USER, process.env.DATABASE_PASSWORD, prodConfig);
+  sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, prodConfig);
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
